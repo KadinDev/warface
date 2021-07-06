@@ -1,1 +1,1 @@
-Iniciando site WARFACE, sistema para pro players
+Iniciando site WARFACE, sistema para pro players, com compartilhamento de vídeos!
