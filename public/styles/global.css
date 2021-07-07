@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
+
+
 :root {
     --background-800: #141414;
+    --white: #FFF;
     --white-900: #999;
-    --red: #DB1D4B;
+    --red: #FF4F4F;
     --black: #120907;
     --blue-900: #132743;
     --blue-500: #0085FF;
@@ -12,12 +17,13 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', 'san-serif';
-    background: var(--background-800);
 }
 
 @media (max-width: 1080px) {
@@ -53,6 +59,6 @@ a {
 }
 
 h1, h2, h3, h4, h5, strong {
-    font-weight: 500;
+    font-weight: 600;
 }
 

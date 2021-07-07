@@ -1,3 +1,144 @@
-.header a {
-    color: white;
+body {
+    background-color: var(--background-800);
+}
+
+.container {
+    color: var(--white);
+    font-family: 'Qahiri', sans-serif;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    border-bottom: solid 1px black;
+}
+
+.container .box-audio {
+    z-index: 10;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    box-shadow: 0 0 10px var(--white);
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10%;
+    border-radius: 5px;
+
+}
+
+.container .box-audio audio {
+    display: none
+}
+
+.container .box-audio span {
+    cursor: pointer;
+}
+
+span.active {
+    transition: all 1s;
+    animation: span ease-in-out infinite 0.7s;
+}
+
+@keyframes span {
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.container .box-audio i {
+    transform: scale(1.5);
+}
+
+.container .box-audio p {
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 12px;
+    line-height: 12px;
+    text-align: left;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: var(--background-800);
+    mix-blend-mode: hard-light;
+
+    z-index: 5;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .box-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+
+.container .box-container span {
+    font-size: 100px;
+    letter-spacing: 15px;
+    text-shadow: 0 0 50px var(--black);
+}
+
+.container .box-container h1 {
+    font-size: 200px;
+    letter-spacing: 30px;
+    font-weight: normal;
+    text-shadow: 0 0 50px var(--black);
+}
+
+.container .box-container  a {
+    font-family: 'Poppins', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 4px;
+    background: var(--black);
+    padding: 4px 15px;
+    box-shadow: 0 0 15px var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    animation: proPlayersText 1.5s ease-in-out infinite;
+}
+
+@keyframes proPlayersText {
+    0% {
+        box-shadow: 0 0 15px var(--white);
+        background: var(--black);
+        color: var(--white);
+    }
+    50% {
+        box-shadow: 0 0 15px red;
+        background: var(--white);
+        color: var(--black);
+    }
+    
+}
+
+/* HEADER */
+.header {
+    padding: 50px;
+    height: 100vh;
 }

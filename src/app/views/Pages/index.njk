@@ -1,21 +1,38 @@
 {% extends 'layout.njk' %}
 
 {% block title %}
-    <title> PAGE 1 </title>
+    <title> WarFace | Pro Players</title>
 {% endblock title %}
 
 {% block content %}
 
-    <div class="header">
-        <a href="#">Aula</a>
-        <a href="#">My</a>
+    <div class="container">
+        <div class="box-audio">
+
+            <audio>
+                <source src="/assets/warfaceTheme.mp3" >
+            </audio>
+            
+            <span>
+            </span>
+            <p>warface <br/> theme</p>
+            
+            <!--<i class="fa fa-pause-circle"></i>
+-->
+        </div>
+
+        <div class="background-container"></div>
+        <img src="/assets/wf-home-gif.gif">
+        <div class="box-container">
+            <span>mundo</span>
+            <h1>warface</h1>
+            <a href="#home">pro players</a>
+        </div>
     </div>
 
-    <div class="container">
-        <div class="div"></div>
-        <div class="div"></div>
-        <div class="div"></div>
-        <div class="div"></div>
+    <div id="home" class="header">
+        <a href="#">GO GO GO</a>
     </div>
+
 
 {% endblock content %}
