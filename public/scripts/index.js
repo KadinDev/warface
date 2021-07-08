@@ -20,11 +20,5 @@ span_audio.addEventListener('click', ()=>{
     span_audio.classList.toggle('active')
 })
 
-/*
-document.addEventListener('click', function(){
-    const audio = document.querySelector('audio');
-    audio.volume = 0.1;
-    audio.play();
-})
-*/
+
 

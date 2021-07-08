@@ -96,16 +96,17 @@ span.active {
 }
 
 .container .box-container span {
-    font-size: 100px;
+    font-size: 6.25rem;
     letter-spacing: 15px;
     text-shadow: 0 0 50px var(--black);
 }
 
 .container .box-container h1 {
-    font-size: 200px;
+    font-size: 12.5rem;
     letter-spacing: 30px;
     font-weight: normal;
     text-shadow: 0 0 50px var(--black);
+
 }
 
 .container .box-container  a {
@@ -135,6 +136,31 @@ span.active {
         color: var(--black);
     }
     
+}
+
+.videos-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.iframes {
+    display: flex;
+    flex-direction: column;
+}
+
+.videos-container iframe {
+    width: 150px;
+    height: 100px;
+    margin: 10px 20px;
+    border: solid 1px var(--white);
+    border-radius: 2%;
+    box-shadow: 0 0 10px var(--white)
 }
 
 /* HEADER */
