@@ -1,6 +1,5 @@
 .header {
     padding: 10px 40px;
-    height: 100vh;
 }
 
 body {
@@ -49,6 +48,9 @@ body {
 
     font-family: 'Poppins', 'sans-serif';
     outline: none;
+
+    color: var(--red);
+
 }
 
 /*
@@ -80,4 +82,89 @@ body {
 
 .form-search .links a {
     color: var(--white);
+}
+
+/* LAST VIDEOS */
+.last-videos {
+    color: var(--white);
+    padding: 90px 40px;
+    position: absolute;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    margin-top: 20px;
+}
+
+.last-videos .container-video {
+    margin-bottom: 40px;
+}
+
+.last-videos h1 {
+    position: absolute;
+    top: 10px;
+    font-weight: normal;
+    font-size: 20px;
+    right: 40px;
+    text-transform: capitalize;
+}
+
+.last-videos .user {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    position: relative;
+    margin-bottom: 7px;
+}
+
+.last-videos .user a span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    bottom: 10%;
+    border: solid 1px var(--white-900);
+}
+
+.last-videos .user a span:hover {
+    box-shadow: 0 0 10px var(--white)
+}
+
+.last-videos .user p {
+    color: var(--white);
+    text-transform: capitalize;
+    filter: brightness(80%);
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+}
+.last-videos iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px white;
+}
+
+.container-video .date-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-video .date-post p {
+    text-transform: uppercase;
+    font-size: 11px;
+    list-style: 10px;
+    font-weight: normal;
+}
+
+.container-video .date-post p:last-child {
+    letter-spacing: 2px;
+    background-color: var(--blue-900);
+    padding: 2px 5px;
+    border-radius: 4px
 }
