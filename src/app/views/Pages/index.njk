@@ -6,7 +6,7 @@
 
 {% block content %}
 
-    <div class="container">
+    <div class="container" id="theme">
         <div class="box-audio">
 
             <audio>
@@ -29,30 +29,47 @@
 
         <div class="videos-container">
             <div class="iframes">
-                <iframe 
-                    src="https://www.youtube.com/embed/zyQqLH58xQQ?autoplay=1"
-                ></iframe>
-                <iframe 
-                    src="https://www.youtube.com/embed/2c1GC3am2-8?autoplay=1"
-                ></iframe>
+
+                <div class="iframe" id="zyQqLH58xQQ" >
+                    <img src="/assets/rifleman.png">
+                    <h1>RIFLEMAN</h1>
+                    <p>An all-round role providing the firepower to drive their team forward. The Rifleman can resupply ammo to himself and his teammates. They are best suited for close- to medium-range combat.</p>
+                </div>
+                <div class="iframe" id="2c1GC3am2-8" >
+                    <img src="/assets/medic.png">
+                    <h1>MEDIC</h1>
+                    <p>Being the traditional 'recovery' class, Medics can heal both themselves and their teammates, and can revive allies who have fallen. Their standard weapon is best suited for close-range combat.</p>
+                </div>
+            
             </div>
 
             <div class="iframes">
-                <iframe 
-                    src="https://www.youtube.com/embed/pLG110Ew8ME?autoplay=1"
-                ></iframe>
-                <iframe 
-                    src="https://www.youtube.com/embed/oEon_CNv46c?autoplay=1"
-                    frameborder="0"
-                ></iframe>        
+
+                <div class="iframe" id="IRmIPfmERx4" >
+                    <img src="/assets/engineer.png">
+                    <h1>ENGINEER</h1>
+                    <p>The Engineer is a support class who can restore both their own and their teammates' armor. Engineers can also lay claymores and detonate explosives faster than other classes. The Engineer is best suited for close-to medium-range combat.</p>
+                </div>
+                <div class="iframe" id="PDitk-W25lc" >
+                    <img src="/assets/sniper.png">
+                    <h1>SNIPER</h1>
+                    <p>Snipers provide long-range support and are deadly accurate. Even though they don't have the additional skills of the other classes, their advantages from distance and highest damage ratio per bullet make them essential to any team.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal-videos">
+            <i class="fa fa-times-circle"></i>
+            <div class="modal-video-player">
+                <iframe src=""></iframe>
+                <h1></h1>
+                <p></p>
             </div>
         </div>
         
     </div>
 
-    <div id="home" class="header">
-        <a href="#">GO GO GO</a>
-    </div>
-
+    {% include 'Parts/header.njk' %}
 
 {% endblock content %}
