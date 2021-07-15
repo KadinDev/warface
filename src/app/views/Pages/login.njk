@@ -1,0 +1,115 @@
+{% extends 'layout.njk' %}
+
+{% block title %}
+    <title> Login player </title>
+    <link rel="stylesheet" href="/styles/login.css">
+{% endblock title %}
+
+{% block content %}
+    <div class="main">
+
+        <div class="login">
+            
+            <h1>Login</h1>
+            
+            <form action="/Pages" method="GET">
+            
+                <input 
+                    type="email"
+                    placeholder="Email"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+                <input 
+                    type="password"
+                    placeholder="Password"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+
+                <button 
+                    type="submit"
+                >  Enter </button>
+                
+                <div class="create-account">
+                    <a href="">
+                        <p>Recover<br>Password</p>
+                    </a>
+                    
+                    <p id="go-for-register">register</p>
+                </div>
+                
+            </form>
+
+           
+
+            <div class="background-form"></div>
+        </div>
+
+        <div class="register active">
+            
+            <h1>
+                Register  
+                <div id="img-container">
+                    <img id="preview" src="http://placehold.it/200x200?text=IMAGE" >
+                </div>
+            </h1>
+            
+            <form method="POST" action="/Pages" enctype="multipart/form-data">
+                <div class="user-photo">
+                    <input
+                        id="img-input" 
+                        type="file"
+                        accept="image/*"
+                        name="userPhoto"
+                        required
+                        value="Enviar"
+                    >
+                    <p> <i class="fa fa-camera-retro"></i> </p>
+                </div>
+
+                <input 
+                    type="text"
+                    placeholder="Name"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+                <input 
+                    type="email"
+                    placeholder="Email"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+                <input 
+                    type="text"
+                    placeholder="Password"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+                <input 
+                    type="text"
+                    placeholder="Repeat Password"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+
+                <button 
+                    type="submit"
+                > Register </button>
+            </form>
+            
+            <p id="back-for-login" class="back-login"> <i class="fa fa-arrow-left"></i> </p>
+            
+
+
+        </div>
+
+        <script src="/scripts/pageLogin.js"></script>
+    </div>
+{% endblock content %}
