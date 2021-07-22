@@ -11,12 +11,16 @@ routes.get('/Pages', function (req, res) {
     return res.render('Pages/index');
 });
 
-routes.get('/Players', function (req, res) {
+routes.get('/players', function (req, res) {
     return res.render('Pages/pagePlayers');
 });
 
 routes.get('/Login', function (req, res) {
     return res.render('Pages/login');
+});
+
+routes.get('/player', ( req, res ) => {
+    return res.render('Pages/player');
 });
 
 

@@ -13,14 +13,17 @@
             <h1>Login</h1>
             
             <form action="/Pages" method="GET">
-            
-                <input 
-                    type="email"
-                    placeholder="Email"
-                    autocomplete="off"
-                    spellcheck="false"
-                    required
-                >
+                <div class="box-input-login">
+
+                    <input 
+                        type="email"
+                        placeholder="Email"
+                        autocomplete="off"
+                        spellcheck="false"
+                        required
+                        {onblur="validate.apply(this, 'isEmail')"}
+                    >
+                </div>
                 <input 
                     type="password"
                     placeholder="Password"
@@ -34,9 +37,7 @@
                 >  Enter </button>
                 
                 <div class="create-account">
-                    <a href="">
-                        <p>Recover<br>Password</p>
-                    </a>
+                    <p id="active-modal">Recover<br>Password</p>
                     
                     <p id="go-for-register">register</p>
                 </div>
@@ -72,7 +73,7 @@
 
                 <input 
                     type="text"
-                    placeholder="Name"
+                    placeholder="Name / Nick Game"
                     autocomplete="off"
                     spellcheck="false"
                     required
@@ -83,6 +84,17 @@
                     autocomplete="off"
                     spellcheck="false"
                     required
+
+                    {onblur="validate.apply(this, 'isEmail')"} 
+                >
+                <input 
+                    type="email"
+                    placeholder="Repeat Email"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+
+                    {onblur="validate.apply(this, 'isEmail')"} 
                 >
                 <input 
                     type="text"
@@ -110,6 +122,25 @@
 
         </div>
 
+        <div class="modal active">
+            <div class="container">
+                <form method="GET" action="">
+                    <h1>recover password</h1>
+                    <input 
+                        type="email"
+                        placeholder="Email"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <button type="submit">submit</button>
+                    <i class="fa fa-times"></i>
+                </form>
+            </div>
+        </div>
+
         <script src="/scripts/pageLogin.js"></script>
+
+
+        {% include 'Parts/footer.njk' %}
     </div>
 {% endblock content %}

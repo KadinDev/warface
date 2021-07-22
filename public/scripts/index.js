@@ -46,3 +46,23 @@ for ( let video of iframe ) {
 }
 
 
+/* LATEST VIDEOS POSTED */
+
+const latest_videos_posted = document.querySelectorAll( '.container-video ' );
+const modal_latest_videos = document.querySelector('.latest-videos-modal');
+const close_modal_latest_videos = modal_latest_videos.querySelector('i');
+
+for ( let video_posted of latest_videos_posted ) {
+    video_posted.querySelector('#expand').addEventListener('click', () => {
+        modal_latest_videos.classList.add('active');
+        const src_latest_video = video_posted.getAttribute('id');
+        modal_latest_videos.querySelector('iframe').src = `https://www.youtube.com/embed/${src_latest_video}`;
+    });
+
+    close_modal_latest_videos.addEventListener('click', () => {
+        modal_latest_videos.classList.remove('active');
+        modal_latest_videos.querySelector('iframe').src = "";
+    })
+}
+
+/* END LATEST VIDEOS POSTED */

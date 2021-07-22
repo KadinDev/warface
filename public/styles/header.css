@@ -7,10 +7,10 @@ body {
 }
 
 .form-search {
-    background-color: var(--background-800);
-    border-radius: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
     width: 100%;
-    height: 70px;
+    height: 50px;
     padding: 40px;
     margin-top: 20px;
     display: flex;
@@ -18,20 +18,19 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    box-shadow: 0 0 15px var(--white);
 }
 
 .links a span img {
     height: 50px;
-    
+    filter: invert(1)
 }
 
 .form-search form {
     background-color: var(--white);
     width: 50%;
     height: 40px;
-    border-radius: 20px;
-    border: solid 2px rgba(59, 54, 54, 0.945);
+    border-radius: 5px;
+    background-color: var(--black);
 
     display: grid;
     grid-template-columns: 1fr 40px;
@@ -41,15 +40,17 @@ body {
 
 .form-search input {
     height: 90%;
-    border-right: 2px var(--background-800) solid;
+    width: 100%;
+    border-right: 2px var(--white) solid;
     padding-left: 10px;
     font-size: 16px;
     line-height: 18px;
+    background-color: var(--black);
 
     font-family: 'Poppins', 'sans-serif';
     outline: none;
 
-    color: var(--red);
+    color: var(--white);
 
 }
 
@@ -63,14 +64,13 @@ body {
     background-color: transparent;
     height: 90%;
     font-size: 18px;
-    transition: transform 0.6s;
+    transition: transform 0.2s;
     outline: none;
+    color: var(--white)
 }
 
 .form-search button:hover {
     transform: translateY(-2px);
-    color: var(--red);
-
 }
 
 .form-search .links.pages {
@@ -80,8 +80,27 @@ body {
 
 }
 
+/* BANNER HEADER */
+.banner {
+    background: url('/assets/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 50%;
+    height: 70px
+}
+/* END BANNER */
+
 .form-search .links a {
-    color: var(--white);
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.form-search .links a:hover {
+    color: var(--red);
 }
 
 /* LAST VIDEOS */
@@ -112,36 +131,58 @@ body {
 }
 
 .last-videos .user {
-    display: grid;
-    grid-template-columns: 50px 1fr;
+    border-radius: 4px 0 0 4px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
-    margin-bottom: 7px;
 }
 
+
 .last-videos .user a span {
-    width: 40px;
-    height: 40px;
+    z-index: 10;
     position: absolute;
+    width: 40px;
+    height: 120%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 50%;
-    bottom: 10%;
-    border: solid 1px var(--white-900);
+    background-size: cover;
+    bottom: 50%;
+    box-shadow: -2px -2px 2px #fff;
+    
+    /*border-radius: 50%;*/
+    
+    transform: translateY(50%);
+    left: 0px;
+    filter: saturate(70%);
+    transition: box-shadow 0.4s;
 }
 
 .last-videos .user a span:hover {
-    box-shadow: 0 0 10px var(--white)
+    box-shadow: -2px -2px 2px #ff4f4f;
+    filter: saturate(100%);
 }
 
 .last-videos .user p {
-    color: var(--white);
+    background: #FFF;
+
+    color: var(--black);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0 2px 2px 0;
+    width: 90%;
+    padding: 5px 0;
+    box-shadow: 2px 2px 2px var(--red);
+
+
     text-transform: capitalize;
-    filter: brightness(80%);
-    text-align: left;
     font-size: 14px;
     line-height: 20px;
 }
+
 .last-videos iframe {
     width: 100%;
     height: 200px;
@@ -160,6 +201,9 @@ body {
     font-size: 11px;
     list-style: 10px;
     font-weight: normal;
+    background-color: var(--blue-900);
+    padding: 2px 5px;
+    border-radius: 4px;
 }
 
 .container-video .date-post p:last-child {
@@ -167,4 +211,85 @@ body {
     background-color: var(--blue-900);
     padding: 2px 5px;
     border-radius: 4px
+}
+
+#expand {
+    cursor: pointer;
+    animation: expand ease-in-out infinite 1s;
+}
+
+#expand:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+
+.latest-videos-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+
+    transition: all 0.4s;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.latest-videos-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.latest-videos-modal i {
+    position: absolute;
+    top: 5vh;
+    right: 100px;
+    transform: scale(2);
+    cursor: pointer;
+    animation: close-video ease-in-out 1s infinite;
+}
+
+.latest-videos-modal i:hover {
+    animation: close-video ease-in-out 1s;
+}
+
+@keyframes close-video {
+    0% {
+       opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.latest-video-player-modal {
+    position: relative;
+    background: black;
+    max-width: 800px;
+    height: 80%;
+    width: 100%;
+    box-shadow: 0 0 15px white;
+}
+
+.latest-video-player-modal iframe {
+    width: 100%;
+    height: 100%;
+    border-bottom: none;
 }

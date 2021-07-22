@@ -1,0 +1,190 @@
+{% extends 'layout.njk' %}
+
+{% block title %}
+    <title> Ricardo Alves </title>
+    <link rel="stylesheet" href="/styles/pagePlayers.css">
+    <link rel="stylesheet" href="/styles/player.css">
+{% endblock title %}
+
+{% block content %}
+    <header>
+
+        <div class="form-search-pro-players">
+
+            <div class="links">
+
+                <a href="/Pages#home">
+                    <span class="logo">
+                        <img src="/assets/logo-home.png" alt="Imagem de Logo">
+                    </span>
+                </a>    
+            </div>
+
+            <!-- 
+            <form action="/players" method="GET">
+                <input 
+                    type="text"
+                    name="filter"
+                    placeholder="search"
+                    value="{{filter}}"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            -->
+
+            <h1> Ricardo Alves </h1>
+            
+        </div>
+
+        <div class="user-login">
+            
+            <img src="/assets/medic.png" alt="">
+
+            <button type="submit">
+
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+
+            </button>
+            
+            <a href="/player">
+                <i class="fa fa-user"></i>
+            </a>
+            
+
+        </div>
+
+    </header>
+
+
+    <section class="cards">
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/cORoHhutz-Y" > </iframe>
+            <i id="cORoHhutz-Y" class="fa fa-expand"></i>
+        </div>
+
+        <div class="box-card">
+            <h4>Frag Sniper</h4>
+            <iframe src="https://www.youtube.com/embed/MmygNSOtXeg" > </iframe>
+            <i id="MmygNSOtXeg" class="fa fa-expand"></i>
+        </div>
+
+    </section>
+
+    
+    <div class="modal-video-user ">
+        <div class="box-modal-user">
+            <iframe src=""></iframe>
+            <i id="closet-modal" class="fa fa-times"></i>
+            <h4> FFA frenético / FRAG = 41/2 </h4>
+        
+            <div class="content-details">
+
+                <form action="/player" method="POST">
+                    <textarea name="comentario"></textarea>
+                    <button type="submit">
+                        <span>  </span>
+                    </button>
+                </form>
+
+                <div class="container-comentarios">
+                    <div class="container-img">
+                        <a href=""> <img src="/assets/ricardo.jpg" alt="Imagem de usuário"> </a>
+                        <div>
+                            <h2> Ricardo Alves </h4>
+                            <p> Muito bom, joga fácil, um verdadeiro pro player, TMJ!! :) </p>
+                        
+                            <div class="icons">
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-img">
+                        <a href=""> <img src="/assets/sniper.png" alt="Imagem de usuário"> </a>
+                        <div>
+                            <h2> HeadShotRJ </h4>
+                            <p> Joga Nice mah </p>
+                        
+                            <div class="icons">
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="container-img">
+                        <a href=""> <img src="/assets/rifleman.png" alt="Imagem de usuário"> </a>
+                        <div>
+                            <h2> FuzileiroProNiceFPS </h4>
+                            <p> Joga bem demais e tá sem clã pq mano? vem pro meu cla na moral hehe </p>
+                        
+                            <div class="icons">
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            
+        
+        </div>
+
+    </div>
+
+
+    <div class="background-page"></div>
+
+    <script src="/scripts/page-player.js"></script>
+
+
+{% endblock content %}

@@ -16,16 +16,25 @@ body {
 
     max-width: 50vw;
     min-height: 400px;
+    height: 70%;
     width: 100%;
 
     box-shadow: 0 0 10px var(--blue-500);
    
-    padding: 40px;
+    padding: 20px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    animation: trasiction ease-in-out 0.7s;
+}
+
+@keyframes trasiction {
+    0% {
+        transform: translateY(-60px);
+    }
 }
 
 .login,
@@ -47,13 +56,23 @@ body {
 
 .login.active,
 .register.active {
-    opacity: 0.2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.login.active {
+    transform: translateX(100%);
+}
+
+.register.active {
+    transform: translateX(-100%);
 }
 
 .login h1,
 .register h1 {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -90,6 +109,24 @@ body {
     justify-content: center;
 
     position: relative;
+}
+
+.box-input-login {
+    width: 100%;
+    position: relative;
+}
+
+.error {
+    background: var(--red);
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    right: 50%;
+    transform: translateX(50%);
+    top: -12px;
 }
 
 .login form input,
@@ -149,13 +186,16 @@ body {
     font-size: 14px;
 }
 
+.register form input {
+    margin-top: 2px
+}
 
 form .user-photo {
     width: 90%;
     box-sizing: border-box;
     margin-top: 30px;
-    margin-bottom: 5px;
-
+    margin-bottom: 10px;
+    height: 20px;
     position: relative;
 }
 
@@ -174,7 +214,6 @@ form .user-photo input {
 
 form .user-photo p {
     width: 100%;
-
     background-color: var(--red);
     border-radius: 5px;
     text-transform: uppercase;
@@ -207,6 +246,10 @@ form .user-photo p i {
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: color 0.6s;
+}
+
+.login p:nth-child(1):hover {
+    color: var(--red);
 }
 
 .login p:nth-child(2) {
@@ -247,3 +290,114 @@ form .user-photo p i {
         transform: translateX(0px)
     }
 }
+
+
+
+/* MODAL RECUPERAR SENHA */
+.modal {
+    opacity: 1;
+    visibility: visible;
+
+    position: fixed;
+    background: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.6s;
+}
+
+.modal.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form {
+    background: var(--black);
+    height: 120px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container form h1 {
+    font-family: 'Poppins', 'sans-serif';
+    background-color: var(--red);
+    font-size: 18px;
+    line-height: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: solid 1px #FFF;
+    position: absolute;
+    top: -15px;
+    font-weight: normal;
+}
+
+.container form input,
+.container form button {
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 3px;
+    border: solid 1px #FFF;
+    outline: none;
+}
+
+.container form input {
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 16px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 5px;
+    outline: none;
+    color: var(--red);
+}
+
+.container form input:focus {
+    border: solid 1px var(--red);
+}
+
+.container form button {
+    margin-top: 5px;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--red);
+    text-transform: uppercase;
+    transition: all 0.6s
+}
+
+.container form button:hover {
+    color: var(--white);
+    background: var(--black);
+}
+
+.modal i {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.7s;
+}
+
+.modal i:hover {
+    opacity: 1;
+} 
